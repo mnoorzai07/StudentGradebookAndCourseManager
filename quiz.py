@@ -1,12 +1,20 @@
-# quiz.py
 from assessment import Assessment
 
 class Quiz(Assessment):
-    def init(self, title, max_score):
+    def __init__(self, title, max_score):
         super().__init__(title, max_score)
 
-    def grade_message(self, score):
-        pass
-
     def display_info(self):
-        pass
+        print(f"Quiz: {self.title} - Maximum Score: {self.max_score}")
+
+    def grade_message(self, score):
+        percentage = self.calculate_percentage(score)
+
+        if percentage >= 80:
+            return "Perfect quiz result!"
+        elif 60 >= percentage >= 79:
+            return "Good quiz result!"
+        else:
+            return "Unsatisfying quiz result! Try more!"
+
+
