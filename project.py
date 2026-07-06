@@ -4,8 +4,18 @@ class Project(Assessment):
     def init(self, title, max_score):
         super().__init__(title, max_score)
 
-    def grade_message(self, score):
-        pass
 
     def display_info(self):
-        pass
+        print(f"Project: {self.title} - Maximum Score: {self.max_score}")
+
+
+
+    def grade_message(self, score):
+        percentage = self.calculate_percentage(score)
+
+        if percentage >= 90:
+            return "Excellent project!"
+        elif percentage >= 55:
+            return "Project submitted."
+        else:
+            return "Project needs improvement."
