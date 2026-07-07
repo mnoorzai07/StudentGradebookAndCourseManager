@@ -49,7 +49,11 @@ class Gradebook:
         pass
 
     def search_student(self, keyword):
-        pass
+        keyword = keyword.lower()
+        for student in self.students:
+            if keyword == student.student_id or keyword in student.name.lower():
+                return student
+        return None
 
     def delete_student(self, student_id):
         pass
