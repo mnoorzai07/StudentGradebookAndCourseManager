@@ -6,10 +6,10 @@ class Gradebook:
         self.passing_grade = passing_grade
 
     def add_student(self, student):
-        pass
+        self.students[student.student_id] = student
 
     def add_course(self, course):
-        pass
+        self.courses[course.course_code] = course
 
     def enroll_student(self, student_id, course_code):
         pass
