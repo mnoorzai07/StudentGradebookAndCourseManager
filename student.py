@@ -12,10 +12,16 @@ class Student:
         return self.name
 
     def set_email(self, email):
-        pass
+        if "@" in email:
+            self.email = email
+        else:
+            print("Invalid email address!")
 
     def enroll_course(self, course_code):
         pass
 
     def display_info(self):
-        pass
+        print(f"Student ID: {self.student_id}")
+        print(f"Name: {self.name}")
+        print(f"Email: {self.email}")
+        print(f"Courses: {self.courses}")
