@@ -7,7 +7,8 @@ class Course:
         self.assessments = []
 
     def add_student(self, student_id):
-        pass
+        if student_id not in self.students:
+            self.students.append(student_id)
 
     def add_assessment(self, assessment):
         pass
@@ -16,4 +17,7 @@ class Course:
         pass
 
     def display_info(self):
-        pass
+        print(f"Course Code: {self.course_code}")
+        print(f"Course Name: {self.course_name}")
+        print(f"Students: {self.students}")
+        print(f"Assessments: {self.assessments}")
