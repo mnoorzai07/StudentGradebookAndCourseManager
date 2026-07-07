@@ -22,7 +22,10 @@ class Gradebook:
             print("Student or Course not found.")
 
     def add_assessment(self, course_code, assessment):
-        pass
+        if course_code in self.courses:
+            self.courses[course_code].add_assessment(assessment)
+        else:
+            print("Course not found.")
 
     def record_grade(self, student_id, course_code, assessment_title, score):
         pass
@@ -31,7 +34,10 @@ class Gradebook:
         pass
 
     def get_result(self, average):
-        pass
+        if average >= self.passing_grade:
+            return "Passed"
+        else:
+            return "Failed"
 
     def show_report(self, student_id):
         pass
