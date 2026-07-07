@@ -6,10 +6,10 @@ class Student:
         self.courses = []
 
     def get_id(self):
-        pass
+        return self.student_id
 
     def get_name(self):
-        pass
+        return self.name
 
     def set_email(self, email):
         pass
