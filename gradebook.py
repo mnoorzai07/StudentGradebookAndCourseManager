@@ -31,7 +31,13 @@ class Gradebook:
         pass
 
     def calculate_average(self, student_id, course_code):
-        pass
+        if student_id in self.grades and course_code in self.grades[student_id]:
+            score = self.grades[student_id][course_code]
+
+            if len(score) == 0:
+                return 0
+            return sum(score) / len(score)
+        return 0
 
     def get_result(self, average):
         if average >= self.passing_grade:
