@@ -18,7 +18,8 @@ class Student:
             print("Invalid email address!")
 
     def enroll_course(self, course_code):
-        pass
+        if course_code not in self.courses:
+            self.courses.append(course_code)
 
     def display_info(self):
         print(f"Student ID: {self.student_id}")
