@@ -12,7 +12,14 @@ class Gradebook:
         self.courses[course.course_code] = course
 
     def enroll_student(self, student_id, course_code):
-        pass
+        if student_id in self.students:
+            student = self.students[student_id]
+            student.enroll_course(course_code)
+        elif course_code in self.courses:
+            course = self.courses[course_code]
+            course.enroll_student(student_id)
+        else:
+            print("Student or Course not found.")
 
     def add_assessment(self, course_code, assessment):
         pass
