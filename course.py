@@ -1,4 +1,3 @@
-# course.py
 class Course:
     def __init__(self, course_code, course_name):
         self.course_code = course_code
@@ -11,10 +10,13 @@ class Course:
             self.students.append(student_id)
 
     def add_assessment(self, assessment):
-        pass
+        self.assessments.append(assessment)
 
     def find_assessment(self, title):
-        pass
+        for assessment in self.assessments:
+            if assessment.title == title:
+                return assessment
+        return None
 
     def display_info(self):
         print(f"Course Code: {self.course_code}")
