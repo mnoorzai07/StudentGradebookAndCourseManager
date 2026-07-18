@@ -10,16 +10,16 @@ class Assessment:
         percentage = self.calculate_percentage(score)
 
         if percentage >= 90:
-            return "Outstanding Excellent!!! Absolute mastery and top-tier performance."
+            return "Outstanding Excellent!!!"
         elif 89 >= percentage >= 80:
-            return "High Excellence!!! Strong capacity with minor room for growth."
+            return "High Excellence!!!"
         elif 79 >= percentage >= 70:
-            return "Above Average! Meeting the basic requirements, need refinement."
-        elif 50 >= percentage >= 69:
-            return "Average! You meet the basic requirements,but you need refinement."
+            return "Above Average!"
+        elif 69 >= percentage >= 50:
+            return "Average!"
         else:
             return"Developing! You need significant improvement and focus."
 
 
     def display_info(self):
-        print(f"{self.title}: {self.max_score}%")
+        print(f"{self.title}: - Max Score: {self.max_score}")

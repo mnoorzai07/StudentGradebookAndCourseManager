@@ -24,4 +24,3 @@ class Course:
         print(f"Assessments: ")
         for assessment in self.assessments:
             assessment.display_info()
-            
