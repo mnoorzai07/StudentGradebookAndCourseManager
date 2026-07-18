@@ -19,7 +19,9 @@ class Course:
         return None
 
     def display_info(self):
-        print(f"Course Code: {self.course_code}")
-        print(f"Course Name: {self.course_name}")
+        print(f"Course Code: {self.course_code} - {self.course_name}")
         print(f"Students: {self.students}")
-        print(f"Assessments: {self.assessments}")
+        print(f"Assessments: ")
+        for assessment in self.assessments:
+            assessment.display_info()
+            
