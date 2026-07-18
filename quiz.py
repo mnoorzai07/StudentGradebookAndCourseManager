@@ -12,7 +12,7 @@ class Quiz(Assessment):
 
         if percentage >= 80:
             return "Perfect quiz result!"
-        elif 60 >= percentage >= 79:
+        elif 79 >= percentage >= 60:
             return "Good quiz result!"
         else:
             return "Unsatisfying quiz result! Try more!"
