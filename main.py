@@ -5,7 +5,6 @@ from exam import Exam
 from project import Project
 from gradebook import Gradebook
 
-
 # Create the gradebook
 gradebook = Gradebook()
 
