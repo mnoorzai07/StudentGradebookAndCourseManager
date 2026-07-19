@@ -20,6 +20,5 @@ class Assessment:
         else:
             return"Developing! You need significant improvement and focus."
 
-
     def display_info(self):
         print(f"{self.title}: - Max Score: {self.max_score}")
