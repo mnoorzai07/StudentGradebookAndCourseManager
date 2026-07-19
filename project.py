@@ -1,8 +1,6 @@
 from assessment import Assessment
 
 class Project(Assessment):
-    def init(self, title, max_score):
-        super().__init__(title, max_score)
 
 
     def display_info(self):

@@ -1,8 +1,7 @@
 from assessment import Assessment
 
 class Quiz(Assessment):
-    def __init__(self, title, max_score):
-        super().__init__(title, max_score)
+
 
     def display_info(self):
         print(f"Quiz: {self.title} - Maximum Score: {self.max_score}")
@@ -16,5 +15,7 @@ class Quiz(Assessment):
             return "Good quiz result!"
         else:
             return "Unsatisfying quiz result! Try more!"
+
+
 
 

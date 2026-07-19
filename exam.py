@@ -1,9 +1,6 @@
 from assessment import Assessment
 
 class Exam(Assessment):
-    def init(self, title, max_score):
-        super().__init__(title, max_score)
-
 
     def display_info(self):
         print(f"Exam: {self.title} - Maximum Score: {self.max_score}")
