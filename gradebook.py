@@ -3,7 +3,6 @@ class Gradebook:
         self.students = {}
         self.courses = {}
         self.grades = {}
-        self.comments = {}
         self.passing_grade = 55
 
     def add_student(self, student):
