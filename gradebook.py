@@ -95,6 +95,21 @@ class Gradebook:
         if student_id in self.grades:
             del self.grades[student_id]
 
+    def get_letter_grade(self, average):
+
+        if average >= 90:
+            return "A"
+        elif average >= 80:
+            return "B"
+        elif average >= 70:
+            return "C"
+        elif average >= 60:
+            return "D"
+        elif average >= 50:
+            return "E"
+        else:
+            return "F"
+
     def show_report(self, student_id):
 
         if student_id not in self.students:
@@ -122,6 +137,10 @@ class Gradebook:
                 print(f"{title}: {grade:.1f}%")
 
             average = self.calculate_average(student_id, course_code)
+
+            print(f"Average: {average:.1f}%")
+            print(f"Letter Grade: {self.get_letter_grade(average)}")
+            print(f"Result: {self.get_result(average)}")
 
             print()
             print(f"Average: {average:.1f}%")
