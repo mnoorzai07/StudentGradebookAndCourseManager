@@ -105,7 +105,7 @@ class Gradebook:
 
         print(f"Student ID: {student.student_id}")
         print(f"Name: {student.name}")
-        print(f"Email: {student.email}")
+        print(f"Email: {student.get_email()}")
 
         print()
 
