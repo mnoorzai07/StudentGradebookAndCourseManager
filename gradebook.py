@@ -3,6 +3,7 @@ class Gradebook:
         self.students = {}
         self.courses = {}
         self.grades = {}
+        self.comments = {}
         self.passing_grade = 55
 
     def add_student(self, student):
@@ -73,6 +74,8 @@ class Gradebook:
 
         return "Failed"
 
+
+
     def search_student(self, keyword):
 
         for student in self.students.values():
@@ -94,8 +97,8 @@ class Gradebook:
 
         if student_id in self.grades:
             del self.grades[student_id]
-
-    def get_letter_grade(self, average):
+    @staticmethod
+    def get_letter_grade(average):
 
         if average >= 90:
             return "A"
@@ -109,6 +112,20 @@ class Gradebook:
             return "E"
         else:
             return "F"
+    @staticmethod
+    def get_teacher_comment(average):
+        if average >= 90:
+            return "Excellent work! Keep up the outstanding performance."
+        elif average >= 80:
+            return "Very good job! You are doing very well."
+        elif average >= 70:
+            return "Good work! Keep practicing to improve even more."
+        elif average >= 60:
+            return "Nice effort. There is room for improvement."
+        elif average >= 50:
+            return "You passed, but you should work harder next time."
+        else:
+            return "You need to improve. Please study more and ask for help when needed."
 
     def show_report(self, student_id):
 
@@ -142,7 +159,7 @@ class Gradebook:
             print(f"Letter Grade: {self.get_letter_grade(average)}")
             print(f"Result: {self.get_result(average)}")
 
-            print()
-            print(f"Average: {average:.1f}%")
-            print(f"Result: {self.get_result(average)}")
+
+
+            print(f"Teacher Comment: {self.get_teacher_comment(average)}")
 
