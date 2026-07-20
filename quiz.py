@@ -13,7 +13,3 @@ class Quiz(Assessment):
             return "Good quiz result!"
         else:
             return "Unsatisfying quiz result! Try more!"
-
-
-
-

@@ -11,4 +11,3 @@ class Exam(Assessment):
             return "Passed exam."
         else:
             return "Failed exam."
-
